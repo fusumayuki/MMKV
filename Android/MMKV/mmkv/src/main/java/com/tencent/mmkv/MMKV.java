@@ -191,9 +191,9 @@ public class MMKV implements SharedPreferences, SharedPreferences.Editor {
     }
 
     public static String initialize(@NonNull Context context, String rootDir, LibLoader loader, MMKVLogLevel logLevel, MMKVHandler handler) {
-        if (!Process.is64Bit()) {
-            throw new UnsupportedArchitectureException("MMKV 2.0+ requires 64-bit App, use 1.3.x instead.");
-        }
+        // if (!Process.is64Bit()) {
+        //     throw new UnsupportedArchitectureException("MMKV 2.0+ requires 64-bit App, use 1.3.x instead.");
+        // }
         String cacheDir = context.getCacheDir().getAbsolutePath();
 
         gCallbackHandler = handler;
